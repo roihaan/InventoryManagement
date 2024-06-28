@@ -1,0 +1,26 @@
+﻿@model InventoryManagementWeb.Models.Transaction
+
+<h1>Add Transaction</h1>
+
+<form asp-action="PostTransaction">
+    <div class="form-group">
+        <label>Product ID:</label>
+        <input asp-for="ProductId" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Transaction Type:</label>
+        <select asp-for="TransactionType" class="form-control">
+            <option value="Add">Add</option>
+            <option value="Remove">Remove</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Quantity:</label>
+        <input asp-for="Quantity" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Date:</label>
+        <input asp-for="Date" type="date" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
