@@ -34,9 +34,11 @@ namespace InventoryManagementWeb.Services
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                // Log the exception
+                throw new Exception("Error adding transaction: " + ex.Message);
             }
         }
+
 
         public void Delete(int id)
         {
@@ -148,6 +150,11 @@ namespace InventoryManagementWeb.Services
 
             _inventory.SaveChanges();
             return existingTransaction;
+        }
+
+        public IEnumerable<Product> GetProducts()
+        {
+            return _inventory.Products.ToList(); 
         }
     }
 }

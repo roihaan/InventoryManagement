@@ -9,5 +9,6 @@ namespace InventoryManagementWeb.Contracts
         IEnumerable<ViewModel> GetTransactionsByProductName(string transactionName);
         ViewModel GetByIdJoin(int id);
         bool Exists(int id);
+        IEnumerable<Product> GetProducts();
     }
 }

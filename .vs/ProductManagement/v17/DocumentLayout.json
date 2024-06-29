@@ -1,14 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\fazar\\Downloads\\roihaan\\ProductManagement\\",
+  "WorkspaceRootPath": "C:\\Users\\fazar\\Downloads\\roihaan\\InventoryManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\fazar\\Downloads\\roihaan\\ProductManagement\\InventoryManagementWeb\\InventoryManagementWeb.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:InventoryManagementWeb\\InventoryManagementWeb.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{7DACFD3E-C16F-43F0-8D76-25DE3040B557}|InventoryManagementWeb\\InventoryManagementWeb.csproj|c:\\users\\fazar\\downloads\\roihaan\\inventorymanagement\\inventorymanagementweb\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DACFD3E-C16F-43F0-8D76-25DE3040B557}|InventoryManagementWeb\\InventoryManagementWeb.csproj|solutionrelative:inventorymanagementweb\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81FD9519-77CF-49B6-B22E-9C3313A2EDD2}|InventoryWeb\\InventoryWeb.csproj|c:\\users\\fazar\\downloads\\roihaan\\productmanagement\\inventoryweb\\inventoryweb.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{81FD9519-77CF-49B6-B22E-9C3313A2EDD2}|InventoryWeb\\InventoryWeb.csproj|solutionrelative:inventoryweb\\inventoryweb.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{7DACFD3E-C16F-43F0-8D76-25DE3040B557}|InventoryManagementWeb\\InventoryManagementWeb.csproj|c:\\users\\fazar\\downloads\\roihaan\\inventorymanagement\\inventorymanagementweb\\views\\transactions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7DACFD3E-C16F-43F0-8D76-25DE3040B557}|InventoryManagementWeb\\InventoryManagementWeb.csproj|solutionrelative:inventorymanagementweb\\views\\transactions\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DACFD3E-C16F-43F0-8D76-25DE3040B557}|InventoryManagementWeb\\InventoryManagementWeb.csproj|c:\\users\\fazar\\downloads\\roihaan\\inventorymanagement\\inventorymanagementweb\\services\\transactionservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DACFD3E-C16F-43F0-8D76-25DE3040B557}|InventoryManagementWeb\\InventoryManagementWeb.csproj|solutionrelative:inventorymanagementweb\\services\\transactionservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DACFD3E-C16F-43F0-8D76-25DE3040B557}|InventoryManagementWeb\\InventoryManagementWeb.csproj|c:\\users\\fazar\\downloads\\roihaan\\inventorymanagement\\inventorymanagementweb\\viewmodels\\viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DACFD3E-C16F-43F0-8D76-25DE3040B557}|InventoryManagementWeb\\InventoryManagementWeb.csproj|solutionrelative:inventorymanagementweb\\viewmodels\\viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,27 +35,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "InventoryWeb",
-              "DocumentMoniker": "C:\\Users\\fazar\\Downloads\\roihaan\\ProductManagement\\InventoryWeb\\InventoryWeb.csproj",
-              "RelativeDocumentMoniker": "InventoryWeb\\InventoryWeb.csproj",
-              "ToolTip": "C:\\Users\\fazar\\Downloads\\roihaan\\ProductManagement\\InventoryWeb\\InventoryWeb.csproj",
-              "RelativeToolTip": "InventoryWeb\\InventoryWeb.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-28T16:49:53.303Z",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\fazar\\Downloads\\roihaan\\InventoryManagement\\InventoryManagementWeb\\Views\\Transactions\\Create.cshtml",
+              "RelativeDocumentMoniker": "InventoryManagementWeb\\Views\\Transactions\\Create.cshtml",
+              "ToolTip": "C:\\Users\\fazar\\Downloads\\roihaan\\InventoryManagement\\InventoryManagementWeb\\Views\\Transactions\\Create.cshtml",
+              "RelativeToolTip": "InventoryManagementWeb\\Views\\Transactions\\Create.cshtml",
+              "ViewState": "AQIAABYAAAAAAAAAAAAwwB8AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-29T03:17:05.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TransactionServices.cs",
+              "DocumentMoniker": "C:\\Users\\fazar\\Downloads\\roihaan\\InventoryManagement\\InventoryManagementWeb\\Services\\TransactionServices.cs",
+              "RelativeDocumentMoniker": "InventoryManagementWeb\\Services\\TransactionServices.cs",
+              "ToolTip": "C:\\Users\\fazar\\Downloads\\roihaan\\InventoryManagement\\InventoryManagementWeb\\Services\\TransactionServices.cs",
+              "RelativeToolTip": "InventoryManagementWeb\\Services\\TransactionServices.cs",
+              "ViewState": "AQIAAJMAAAAAAAAAAAAtwJwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T02:47:40.235Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "InventoryManagementWeb.csproj",
-              "DocumentMoniker": "C:\\Users\\fazar\\Downloads\\roihaan\\ProductManagement\\InventoryManagementWeb\\InventoryManagementWeb.csproj",
-              "RelativeDocumentMoniker": "InventoryManagementWeb\\InventoryManagementWeb.csproj",
-              "ToolTip": "C:\\Users\\fazar\\Downloads\\roihaan\\ProductManagement\\InventoryManagementWeb\\InventoryManagementWeb.csproj",
-              "RelativeToolTip": "InventoryManagementWeb\\InventoryManagementWeb.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-28T16:49:17.357Z",
+              "Title": "TransactionsController.cs",
+              "DocumentMoniker": "C:\\Users\\fazar\\Downloads\\roihaan\\InventoryManagement\\InventoryManagementWeb\\Controllers\\TransactionsController.cs",
+              "RelativeDocumentMoniker": "InventoryManagementWeb\\Controllers\\TransactionsController.cs",
+              "ToolTip": "C:\\Users\\fazar\\Downloads\\roihaan\\InventoryManagement\\InventoryManagementWeb\\Controllers\\TransactionsController.cs",
+              "RelativeToolTip": "InventoryManagementWeb\\Controllers\\TransactionsController.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAwGoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T02:46:22.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\fazar\\Downloads\\roihaan\\InventoryManagement\\InventoryManagementWeb\\ViewModels\\ViewModel.cs",
+              "RelativeDocumentMoniker": "InventoryManagementWeb\\ViewModels\\ViewModel.cs",
+              "ToolTip": "C:\\Users\\fazar\\Downloads\\roihaan\\InventoryManagement\\InventoryManagementWeb\\ViewModels\\ViewModel.cs",
+              "RelativeToolTip": "InventoryManagementWeb\\ViewModels\\ViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T03:18:00.185Z",
               "EditorCaption": ""
             }
           ]

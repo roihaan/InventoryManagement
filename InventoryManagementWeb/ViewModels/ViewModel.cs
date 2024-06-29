@@ -10,8 +10,6 @@ namespace InventoryManagementWeb.ViewModels
         public int? TransactionType { get; set; }
         public int? Quantity { get; set; }
         public DateTime? Date { get; set; }
-        public List<Product>? Products { get; set; } // Add this property
-
-        public Transaction Transaction { get; set; }
+        public List<Product>? Products { get; set; }
     }
 }

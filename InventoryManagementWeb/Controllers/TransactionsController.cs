@@ -1,20 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using InventoryManagementWeb.Contracts;
 using InventoryManagementWeb.ViewModels;
+using InventoryManagementWeb.Models; // Ensure to include the correct namespace
+using Microsoft.Extensions.Logging;
 using System;
-using InventoryManagementWeb.Models;
-using System.Collections.Generic;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace InventoryManagementWeb.Controllers
 {
     public class TransactionsController : Controller
     {
         private readonly ITransaction _transactionService;
+        private readonly ILogger<TransactionsController> _logger;
 
-        public TransactionsController(ITransaction transactionService)
+        public TransactionsController(ITransaction transactionService, ILogger<TransactionsController> logger)
         {
             _transactionService = transactionService;
+            _logger = logger;
         }
 
         // GET: Transactions/Index
@@ -43,127 +46,60 @@ namespace InventoryManagementWeb.Controllers
             }
         }
 
-        // GET: Transactions/Details/{id}
-        public IActionResult Details(int id)
+        [HttpGet] // Specify HTTP method explicitly for clarity
+        public IActionResult Create()
+        {
+            var viewModel = new ViewModel();
+            viewModel.Products = _transactionService.GetProducts().ToList();
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(ViewModel viewModel)
         {
             try
             {
-                var viewModel = _transactionService.GetByIdJoin(id);
+                _logger.LogInformation("Create action called");
+
+                if (ModelState.IsValid)
+                {
+                    _logger.LogInformation("Model state is valid");
+
+                    // Ensure to use the correct Transaction class from your project's namespace
+                    var transaction = new InventoryManagementWeb.Models.Transaction
+                    {
+                        ProductId = viewModel.ProductID.GetValueOrDefault(),
+                        TransactionType = viewModel.TransactionType.GetValueOrDefault(),
+                        Quantity = viewModel.Quantity.GetValueOrDefault(),
+                        Date = viewModel.Date.GetValueOrDefault()
+                    };
+
+                    _transactionService.Add(transaction);
+                    _logger.LogInformation("Transaction successfully added");
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    _logger.LogWarning("Model state is invalid");
+                    foreach (var state in ModelState)
+                    {
+                        foreach (var error in state.Value.Errors)
+                        {
+                            _logger.LogWarning($"Property: {state.Key}, Error: {error.ErrorMessage}");
+                        }
+                    }
+                }
+
+                // If the model state is invalid, repopulate the products list
+                viewModel.Products = _transactionService.GetProducts().ToList();
                 return View(viewModel);
             }
             catch (Exception ex)
             {
-                ViewBag.ErrorMessage = $"Error retrieving transaction details: {ex.Message}";
-                return View();
-            }
-        }
-
-        // GET: Transactions/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: Transactions/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Create(Transaction transaction)
-        {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    _transactionService.Add(transaction);
-                    return RedirectToAction(nameof(Index));
-                }
-                return View(transaction);
-            }
-            catch (Exception ex)
-            {
+                _logger.LogError(ex, "Error creating transaction");
                 ViewBag.ErrorMessage = $"Error creating transaction: {ex.Message}";
-                return View(transaction);
-            }
-        }
-
-        // GET: Transactions/Edit/{id}
-        public IActionResult Edit(int id)
-        {
-            try
-            {
-                var transaction = _transactionService.GetById(id);
-                if (transaction == null)
-                {
-                    return NotFound();
-                }
-                return View(transaction);
-            }
-            catch (Exception ex)
-            {
-                ViewBag.ErrorMessage = $"Error retrieving transaction for editing: {ex.Message}";
-                return RedirectToAction(nameof(Index));
-            }
-        }
-
-        // POST: Transactions/Edit/{id}
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Edit(int id, Transaction transaction)
-        {
-            try
-            {
-                if (id != transaction.TransactionId)
-                {
-                    return BadRequest();
-                }
-
-                if (ModelState.IsValid)
-                {
-                    _transactionService.Update(transaction);
-                    return RedirectToAction(nameof(Index));
-                }
-
-                return View(transaction);
-            }
-            catch (Exception ex)
-            {
-                ViewBag.ErrorMessage = $"Error updating transaction: {ex.Message}";
-                return View(transaction);
-            }
-        }
-
-        // GET: Transactions/Delete/{id}
-        public IActionResult Delete(int id)
-        {
-            try
-            {
-                var transaction = _transactionService.GetById(id);
-                if (transaction == null)
-                {
-                    return NotFound();
-                }
-                return View(transaction);
-            }
-            catch (Exception ex)
-            {
-                ViewBag.ErrorMessage = $"Error retrieving transaction for deletion: {ex.Message}";
-                return RedirectToAction(nameof(Index));
-            }
-        }
-
-        // POST: Transactions/DeleteConfirmed/{id}
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
-        {
-            try
-            {
-                _transactionService.Delete(id);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception ex)
-            {
-                ViewBag.ErrorMessage = $"Error deleting transaction: {ex.Message}";
-                return RedirectToAction(nameof(Delete), new { id = id });
+                return View(viewModel);
             }
         }
     }

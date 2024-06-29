@@ -6,13 +6,15 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Services configuration
+
+
+builder.Services.AddDbContext<InventoryDBContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IProduct, ProductService>();
 builder.Services.AddScoped<ITransaction, TransactionService>();
-
-builder.Services.AddDbContext<InventoryDBContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
