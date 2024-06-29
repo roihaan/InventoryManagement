@@ -8445,11 +8445,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fazar\\Downloads\\roihaan\\ProductManagement\\InventoryWeb\\InventoryWeb.csproj",
+      "projectUniqueName": "C:\\Users\\fazar\\Downloads\\roihaan\\InventoryManagement\\InventoryWeb\\InventoryWeb.csproj",
       "projectName": "InventoryWeb",
-      "projectPath": "C:\\Users\\fazar\\Downloads\\roihaan\\ProductManagement\\InventoryWeb\\InventoryWeb.csproj",
+      "projectPath": "C:\\Users\\fazar\\Downloads\\roihaan\\InventoryManagement\\InventoryWeb\\InventoryWeb.csproj",
       "packagesPath": "C:\\Users\\fazar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fazar\\Downloads\\roihaan\\ProductManagement\\InventoryWeb\\obj\\",
+      "outputPath": "C:\\Users\\fazar\\Downloads\\roihaan\\InventoryManagement\\InventoryWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

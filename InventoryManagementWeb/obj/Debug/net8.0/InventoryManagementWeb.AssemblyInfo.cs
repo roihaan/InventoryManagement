@@ -11,11 +11,11 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("f2ce69b3-ec79-418e-a7a0-1f93a07bd141")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("679a3beb-ba23-4963-b538-07fe7097855d")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("InventoryManagementWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+321fd860db4f1df5c6767ee479211d0e2c968f01")]
 [assembly: System.Reflection.AssemblyProductAttribute("InventoryManagementWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InventoryManagementWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

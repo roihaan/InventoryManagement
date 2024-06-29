@@ -1,14 +1,15 @@
+using InventoryManagementWeb.Contracts;
 using InventoryManagementWeb.Models;
+using InventoryManagementWeb.Services;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configuration
-builder.Configuration.AddJsonFile("appsettings.json");
-
 // Services configuration
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IProduct, ProductService>();
+builder.Services.AddScoped<ITransaction, TransactionService>();
 
 builder.Services.AddDbContext<InventoryDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -35,6 +36,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Transactions}/{action=Index}/{id?}");
 
 app.Run();

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JRjZ9HrAJA8=",
+  "dgSpecHash": "HrDfS+0cst8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\fazar\\Downloads\\roihaan\\ProductManagement\\InventoryWeb\\InventoryWeb.csproj",
+  "projectFilePath": "C:\\Users\\fazar\\Downloads\\roihaan\\InventoryManagement\\InventoryWeb\\InventoryWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fazar\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\fazar\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
