@@ -14,7 +14,7 @@ namespace InventoryManagementWeb.Services
 
         public TransactionService(InventoryDBContext inventoryDbContext)
         {
-            _inventory = inventoryDbContext;
+            _inventory = inventoryDbContext ?? throw new ArgumentNullException(nameof(inventoryDbContext));
         }
 
         public Transaction Add(Transaction entity)
@@ -38,7 +38,6 @@ namespace InventoryManagementWeb.Services
                 throw new Exception("Error adding transaction: " + ex.Message);
             }
         }
-
 
         public void Delete(int id)
         {
@@ -99,39 +98,41 @@ namespace InventoryManagementWeb.Services
 
         public IEnumerable<ViewModel> GetProductTransactions()
         {
-            var results = from t in _inventory.Transactions
-                          join p in _inventory.Products
-                          on t.ProductId equals p.ProductId
-                          orderby t.TransactionId descending
-                          select new ViewModel
-                          {
-                              TransactionID = t.TransactionId,
-                              ProductID = t.ProductId,
-                              ProductName = p.Name,
-                              TransactionType = t.TransactionType,
-                              Quantity = t.Quantity,
-                              Date = t.Date
-                          };
-            return results.ToList();
+            var results = _inventory.Transactions
+                .Include(t => t.Product)
+                .OrderByDescending(t => t.TransactionId)
+                .Select(t => new ViewModel
+                {
+                    TransactionID = t.TransactionId,
+                    ProductID = t.ProductId,
+                    ProductName = t.Product.Name,
+                    TransactionType = t.TransactionType,
+                    Quantity = t.Quantity,
+                    Date = t.Date
+                })
+                .ToList();
+
+            return results;
         }
 
         public IEnumerable<ViewModel> GetTransactionsByProductName(string productName)
         {
-            var results = from t in _inventory.Transactions
-                          join p in _inventory.Products on t.ProductId equals p.ProductId
-                          where p.Name.Contains(productName)
-                          orderby t.Date descending
-                          select new ViewModel
-                          {
-                              TransactionID = t.TransactionId,
-                              ProductID = t.ProductId,
-                              TransactionType = t.TransactionType,
-                              Quantity = t.Quantity,
-                              Date = t.Date,
-                              ProductName = p.Name
-                          };
+            var results = _inventory.Transactions
+                .Where(t => t.Product.Name.Contains(productName))
+                .Include(t => t.Product)
+                .OrderByDescending(t => t.Date)
+                .Select(t => new ViewModel
+                {
+                    TransactionID = t.TransactionId,
+                    ProductID = t.ProductId,
+                    ProductName = t.Product.Name,
+                    TransactionType = t.TransactionType,
+                    Quantity = t.Quantity,
+                    Date = t.Date
+                })
+                .ToList();
 
-            return results.ToList();
+            return results;
         }
 
         public Transaction Update(Transaction entity)
@@ -154,7 +155,7 @@ namespace InventoryManagementWeb.Services
 
         public IEnumerable<Product> GetProducts()
         {
-            return _inventory.Products.ToList(); 
+            return _inventory.Products.ToList();
         }
     }
 }
