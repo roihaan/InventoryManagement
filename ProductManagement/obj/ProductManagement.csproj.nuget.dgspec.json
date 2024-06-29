@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fazar\\Downloads\\roihaan\\ProductManagement\\ProductManagement\\ProductManagement.csproj": {}
+    "C:\\Users\\fazar\\Downloads\\roihaan\\InventoryManagement\\ProductManagement\\ProductManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fazar\\Downloads\\roihaan\\ProductManagement\\ProductManagement\\ProductManagement.csproj": {
+    "C:\\Users\\fazar\\Downloads\\roihaan\\InventoryManagement\\ProductManagement\\ProductManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fazar\\Downloads\\roihaan\\ProductManagement\\ProductManagement\\ProductManagement.csproj",
+        "projectUniqueName": "C:\\Users\\fazar\\Downloads\\roihaan\\InventoryManagement\\ProductManagement\\ProductManagement.csproj",
         "projectName": "ProductManagement",
-        "projectPath": "C:\\Users\\fazar\\Downloads\\roihaan\\ProductManagement\\ProductManagement\\ProductManagement.csproj",
+        "projectPath": "C:\\Users\\fazar\\Downloads\\roihaan\\InventoryManagement\\ProductManagement\\ProductManagement.csproj",
         "packagesPath": "C:\\Users\\fazar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fazar\\Downloads\\roihaan\\ProductManagement\\ProductManagement\\obj\\",
+        "outputPath": "C:\\Users\\fazar\\Downloads\\roihaan\\InventoryManagement\\ProductManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

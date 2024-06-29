@@ -17,35 +17,35 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = InventoryWeb
 build_property.RootNamespace = InventoryWeb
-build_property.ProjectDir = C:\Users\fazar\Downloads\roihaan\ProductManagement\InventoryWeb\
+build_property.ProjectDir = C:\Users\fazar\Downloads\roihaan\InventoryManagement\InventoryWeb\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\fazar\Downloads\roihaan\ProductManagement\InventoryWeb
+build_property.MSBuildProjectDirectory = C:\Users\fazar\Downloads\roihaan\InventoryManagement\InventoryWeb
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/fazar/Downloads/roihaan/ProductManagement/InventoryWeb/Create.cshtml]
+[C:/Users/fazar/Downloads/roihaan/InventoryManagement/InventoryWeb/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Q3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/fazar/Downloads/roihaan/ProductManagement/InventoryWeb/Delete.cshtml]
+[C:/Users/fazar/Downloads/roihaan/InventoryManagement/InventoryWeb/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = RGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/fazar/Downloads/roihaan/ProductManagement/InventoryWeb/Details.cshtml]
+[C:/Users/fazar/Downloads/roihaan/InventoryManagement/InventoryWeb/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = RGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/fazar/Downloads/roihaan/ProductManagement/InventoryWeb/Edit.cshtml]
+[C:/Users/fazar/Downloads/roihaan/InventoryManagement/InventoryWeb/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = RWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/fazar/Downloads/roihaan/ProductManagement/InventoryWeb/Index.cshtml]
+[C:/Users/fazar/Downloads/roihaan/InventoryManagement/InventoryWeb/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = SW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/fazar/Downloads/roihaan/ProductManagement/InventoryWeb/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/fazar/Downloads/roihaan/InventoryManagement/InventoryWeb/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

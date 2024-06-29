@@ -11,11 +11,12 @@ public partial class Transaction
 
     public int? ProductId { get; set; }
 
-    public string TransactionType { get; set; }
+    public int TransactionType { get; set; } // 1 kalo berhasil 0 kalo gagal
 
     public int Quantity { get; set; }
 
     public DateTime? Date { get; set; }
 
-    public virtual Product Product { get; set; }
+    public Product Product { get; set; }
+    
 }
