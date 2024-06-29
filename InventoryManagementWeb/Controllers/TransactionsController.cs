@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using InventoryManagementWeb.Contracts;
 using InventoryManagementWeb.ViewModels;
-using InventoryManagementWeb.Models; // Ensure to include the correct namespace
+using InventoryManagementWeb.Models;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
